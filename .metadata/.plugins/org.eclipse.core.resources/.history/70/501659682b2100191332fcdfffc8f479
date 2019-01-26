@@ -1,0 +1,27 @@
+package stepdefinition;
+
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import cucumber.api.java.en.Given;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+
+public class TestSteps {
+	
+	@Given("^I want to launch BabyPlus app$")
+	public void i_want_to_launch_BabyPlus_app() throws Throwable {
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setCapability("Platform", "Android");
+		dc.setCapability("Package", "");
+		dc.setCapability("PhoneName", "");
+		dc.setCapability("UDID", "");
+		AndroidDriver<AndroidElement> driver;
+		driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"),dc);
+		
+
+	}
+
+
+}

@@ -1,0 +1,30 @@
+package stepdefinition;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import cucumber.api.java.en.Given;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+public class TestSteps {
+	
+	AndroidDriver<AndroidElement> driver;
+	@Given("^I want to launch BabyPlus app$")
+	public void i_want_to_launch_BabyPlus_app() throws MalformedURLException {
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setCapability("Platform", "Android");
+		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.hp.babyapp");
+		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.hp.babyplus.baby20.splash.SplashScreenActivity");
+		dc.setCapability(MobileCapabilityType.UDID, "09a89b290005");
+		driver = new AndroidDriver<>(new URL("http://localhost:4727/wd/hub"), dc);
+	
+
+	}
+
+
+}

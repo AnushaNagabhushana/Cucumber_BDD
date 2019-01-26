@@ -1,0 +1,9 @@
+
+@tag
+Feature: BabyPlus
+  I want to use this template for my feature file
+
+  @tag1
+  Scenario: Launch
+  Given I want to launch BabyPlus app
+
