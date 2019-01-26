@@ -40,6 +40,7 @@ public class TestSteps {
 	public void i_am_in_welcome_screen() {
 		String Home_Text = driver.findElement(By.id("tv_app_title")).getText();
 		Assert.assertEquals("Not in Home screen", "Baby+", Home_Text);
+		System.out.println("agdahsfja");
 	  
 	}
 
